@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m as motion, useReducedMotion } from "framer-motion";
 import { Button } from "./components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./components/ui/card";
 import { Input } from "./components/ui/input";
@@ -7,9 +7,10 @@ import { Textarea } from "./components/ui/textarea";
 import { ArrowRight, Sparkles, Send, BadgeCheck, Layout, Zap, PenTool, MonitorSmartphone, Instagram, Linkedin, Menu } from "lucide-react";
 
 const fadeIn = {
-  hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  hidden: { opacity: 0, y: 16 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "easeOut" } },
 };
+
 
 const stagger = {
   hidden: {},
@@ -24,10 +25,22 @@ const navItems = [
   { href: "#contact", label: "Contact" },
 ];
 
+const fakeImages = [
+  "https://images.unsplash.com/photo-1506765515384-028b60a970df?q=80&w=1600&auto=format&fit=crop", // design 1
+  "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop", // bureau dev
+  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop", // teamwork
+  "https://images.unsplash.com/photo-1506765515384-028b60a970df?q=80&w=1600&auto=format&fit=crop", // design 1
+  "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop", // bureau dev
+  "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1600&auto=format&fit=crop", // marketing
+];
+
 export default function OctoberStudioLanding() {
   const [open, setOpen] = React.useState(false);
+  const prefersReduced = useReducedMotion();
 
   return (
+    <LazyMotion features={domAnimation}>
+
 <div className="min-h-screen w-full bg-background text-foreground antialiased">
 {/* Header */}
 <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-black/40 border-b border-border">
@@ -205,46 +218,52 @@ export default function OctoberStudioLanding() {
         </div>
       </section>
 
-      {/* Work */}
-      <section id="work" className="py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.div initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }}>
-            <motion.h2 variants={fadeIn} className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              Quelques réalisations
-            </motion.h2>
-            <motion.p variants={fadeIn} className="mt-3 max-w-2xl text-neutral-300">
-              Un aperçu de projets récents — mélange de design, motion et exigence technique.
-            </motion.p>
+{/* Work */}
+<section id="work" className="py-20 lg:py-28">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <motion.div initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }}>
+      <motion.h2 variants={fadeIn} className="text-3xl font-semibold tracking-tight sm:text-4xl">
+        Quelques réalisations
+      </motion.h2>
+      <motion.p variants={fadeIn} className="mt-3 max-w-2xl text-neutral-300">
+        Un aperçu de projets récents — mélange de design, motion et exigence technique.
+      </motion.p>
 
-            <motion.div variants={stagger} className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <motion.a
-                  key={i}
-                  variants={fadeIn}
-                  href="#"
-                  className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10"
-                >
-                  <img
-                    src={`https://images.unsplash.com/photo-15${i}050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop`}
-                    alt={`Project ${i}`}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-neutral-950/10 to-transparent" />
-                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
-                    <div>
-                      <p className="text-sm text-neutral-300">Projet {i}</p>
-                      <p className="text-xs text-neutral-400">Landing • Motion</p>
-                    </div>
-                    <div className="rounded-full bg-white/10 p-2 backdrop-blur">
-                      <ArrowRight className="h-4 w-4" />
-                    </div>
-                  </div>
-                </motion.a>
-              ))}
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+      <motion.div variants={stagger} className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {fakeImages.map((img, i) => (
+          <motion.a
+            key={i}
+            variants={fadeIn}
+            href="#"
+            whileHover={{ y: -4 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: "spring", stiffness: 300, damping: 26 }}
+            className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 will-change-transform"
+          >
+            <img
+              src={img}
+              alt={`Project ${i + 1}`}
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-neutral-950/10 to-transparent" />
+            <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+              <div>
+                <p className="text-sm text-neutral-300">Projet {i + 1}</p>
+                <p className="text-xs text-neutral-400">Landing • Motion</p>
+              </div>
+              <div className="rounded-full bg-white/10 p-2 backdrop-blur">
+                <ArrowRight className="h-4 w-4" />
+              </div>
+            </div>
+          </motion.a>
+        ))}
+      </motion.div>
+    </motion.div>
+  </div>
+</section>
+
 
 {/* Process */}
 <section id="process" className="py-20 lg:py-28">
@@ -342,11 +361,12 @@ export default function OctoberStudioLanding() {
           {/* Founder 1 */}
           <div className="group relative overflow-hidden rounded-2xl border border-border bg-card">
             <div className="aspect-[4/5] w-full overflow-hidden">
-              <img
-                src="../public/ouissam.png"
-                alt="Photo du co-fondateur 1"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+            <img
+              src="/ouissam.png"
+              alt="Photo du co-fondateur 1"
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+
             </div>
             <div className="p-5">
               <h3 className="text-lg font-semibold">Ouissam Mouniri</h3>
@@ -370,11 +390,12 @@ export default function OctoberStudioLanding() {
           {/* Founder 2 */}
           <div className="group relative overflow-hidden rounded-2xl border border-border bg-card">
             <div className="aspect-[4/5] w-full overflow-hidden">
-              <img
-                src="../public/hamza.png"
-                alt="Photo du co-fondateur 2"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+            <img
+              src="/hamza.png"
+              alt="Photo du co-fondateur 2"
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+
             </div>
             <div className="p-5">
               <h3 className="text-lg font-semibold">Hamza Kermadi</h3>
@@ -518,5 +539,7 @@ export default function OctoberStudioLanding() {
         </div>
       </footer>
     </div>
+    </LazyMotion>
+
   );
 }
