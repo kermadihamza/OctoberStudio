@@ -10,7 +10,7 @@ import { Trans } from "react-i18next";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 16 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "easeOut" } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.2, ease: "easeOut" } },
 };
 
 const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.08 } } };
@@ -110,7 +110,7 @@ export default function OctoberStudioLanding() {
             <div className="absolute -inset-[40%] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/20 via-fuchsia-500/10 to-transparent blur-3xl" />
           </div>
 
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-28">
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} variants={stagger} className="grid gap-10 lg:grid-cols-12 lg:items-center">
               <motion.div variants={fadeIn} className="lg:col-span-7">
                 <p className="inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-300">
@@ -166,7 +166,7 @@ export default function OctoberStudioLanding() {
         </section>
 
         {/* Services */}
-        <section id="services" className="py-20 lg:py-28">
+        <section id="services" className="py-12 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} variants={stagger}>
               <motion.h2 variants={fadeIn} className="text-center text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -177,32 +177,36 @@ export default function OctoberStudioLanding() {
               </motion.p>
 
               <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {[
-                  { icon: <Layout className="h-5 w-5" />, title: t("services.card.1.title"), desc: t("services.card.1.desc") },
-                  { icon: <MonitorSmartphone className="h-5 w-5" />, title: t("services.card.2.title"), desc: t("services.card.2.desc") },
-                  { icon: <PenTool className="h-5 w-5" />, title: t("services.card.3.title"), desc: t("services.card.3.desc") },
-                ].map((s, i) => (
-                  <motion.div key={i} variants={fadeIn}>
-                    <Card className="group h-full rounded-2xl border-white/10 bg-neutral-900/40 backdrop-blur">
-                      <CardHeader>
-                        <CardTitle className="flex items-center gap-3 text-base">
-                          <span className="inline-grid place-items-center rounded-xl border border-white/10 p-2 group-hover:scale-110 transition-transform">
-                            {s.icon}
-                          </span>
-                          {s.title}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent className="text-neutral-300">{s.desc}</CardContent>
-                    </Card>
-                  </motion.div>
-                ))}
+              {[
+  { icon: <Layout className="h-5 w-5" />, title: t("services.card.1.title"), desc: t("services.card.1.desc") },
+  { icon: <MonitorSmartphone className="h-5 w-5" />, title: t("services.card.2.title"), desc: t("services.card.2.desc") },
+  { icon: <PenTool className="h-5 w-5" />, title: t("services.card.3.title"), desc: t("services.card.3.desc") },
+  { icon: <Zap className="h-5 w-5" />, title: t("services.card.4.title"), desc: t("services.card.4.desc") },
+  { icon: <Sparkles className="h-5 w-5" />, title: t("services.card.5.title"), desc: t("services.card.5.desc") },
+  { icon: <BadgeCheck className="h-5 w-5" />, title: t("services.card.6.title"), desc: t("services.card.6.desc") }
+].map((s, i) => (
+  <motion.div key={i} variants={fadeIn}>
+    <Card className="group h-full rounded-2xl border-white/10 bg-neutral-900/40 backdrop-blur">
+      <CardHeader>
+        <CardTitle className="flex items-center gap-3 text-base">
+          <span className="inline-grid place-items-center rounded-xl border border-white/10 p-2 group-hover:scale-110 transition-transform">
+            {s.icon}
+          </span>
+          {s.title}
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="text-neutral-300">{s.desc}</CardContent>
+    </Card>
+  </motion.div>
+))}
+
               </div>
             </motion.div>
           </div>
         </section>
 
         {/* Work */}
-        <section id="work" className="py-20 lg:py-28">
+        <section id="work" className="py-12 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }}>
               <motion.h2 variants={fadeIn} className="text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -234,7 +238,7 @@ export default function OctoberStudioLanding() {
         </section>
 
         {/* Process */}
-        <section id="process" className="py-20 lg:py-28">
+        <section id="process" className="py-12 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} variants={stagger}>
               <motion.h2 variants={fadeIn} className="text-center text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -262,7 +266,7 @@ export default function OctoberStudioLanding() {
         </section>
 
         {/* About */}
-        <section id="about" className="py-20 lg:py-28">
+        <section id="about" className="py-12 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} variants={stagger} className="space-y-10">
               <motion.div variants={fadeIn} className="max-w-3xl">
@@ -345,7 +349,7 @@ export default function OctoberStudioLanding() {
         </section>
 
         {/* Contact */}
-        <section id="contact" className="py-20 lg:py-28">
+        <section id="contact" className="py-12 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} variants={stagger}>
               <motion.div variants={fadeIn} className="rounded-3xl border border-white/10 bg-gradient-to-br from-neutral-900 to-neutral-950 p-8 md:p-12">
