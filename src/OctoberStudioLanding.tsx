@@ -35,7 +35,6 @@ export default function OctoberStudioLanding() {
     { href: "#work", label: t("nav.work") },
     { href: "#process", label: t("nav.process") },
     { href: "#about", label: t("nav.about") },
-    { href: "#contact", label: t("nav.contact") }
   ];
 
   return (
@@ -118,10 +117,12 @@ export default function OctoberStudioLanding() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-28">
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} variants={stagger} className="grid gap-10 lg:grid-cols-12 lg:items-center">
               <motion.div variants={fadeIn} className="lg:col-span-7">
-                <p className="inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-300">
+
+{/* A VOIR */}
+                {/* <p className="inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-300">
                   <Sparkles className="h-3.5 w-3.5" />
                   {t("hero.badge")}
-                </p>
+                </p> */}
 
 <h1 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
   <Trans
@@ -153,6 +154,10 @@ export default function OctoberStudioLanding() {
                   <div className="inline-flex items-center gap-2">
                     <Zap className="h-4 w-4 text-red-500" />
                     {t("hero.badge.tech2")}
+                  </div>
+                  <div className="inline-flex items-center gap-2">
+                    <Zap className="h-4 w-4 text-red-500" />
+                    {t("hero.badge.tech3")}
                   </div>
                 </div>
               </motion.div>

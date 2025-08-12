@@ -4,7 +4,7 @@
     "nav.process": "Méthode",
     "nav.about": "À propos",
     "nav.contact": "Contact",
-    "nav.quote": "Demander un devis",
+    "nav.quote": "Contact",
   
     "a11y.menu.open": "Ouvrir le menu",
     "a11y.social.instagram": "Instagram",
@@ -17,8 +17,10 @@
     "hero.subtitle": "October Studio conçoit des expériences sur‑mesure : landing pages, vitrines, e‑commerce et identités visuelles. Rapides, SEO‑ready et pensées pour la conversion.",
     "hero.cta.start": "Démarrer mon projet",
     "hero.cta.view": "Voir nos projets",
-    "hero.badge.tech1": "React, WordPress & No‑Code",
-    "hero.badge.tech2": "Performance & SEO",
+    "hero.badge.tech1": "Site Web (Site vitrine, e-commerce)",
+    "hero.badge.tech2": "Référencement SEO",
+
+    "hero.badge.tech3": "Communication & Marketing Digital",
     "hero.mock.live": "Live preview",
   
     "services.title": "Ce qu’on fait de mieux",
@@ -56,12 +58,12 @@
     "about.p1.cities": "Bruxelles, Luxembourg, Paris et Dubaï",
     "about.p2": "Du branding au développement web (React, WordPress, no‑code), en passant par le SEO, la publicité en ligne et la création de contenu, nous aidons PME, startups et créateurs à se démarquer et à croître.",
   
-    "founder.1.name": "Ouissam Mouniri",
+    "founder.1.name": "Ouissam",
     "founder.1.role": "Co‑fondateur · CEO",
     "founder.1.tags": "Dubai, Moyen‑Orient",
     "founder.1.bio": "Stratégie digitale & pilotage projet. Expert en campagnes marketing, génération de leads, performance business et conception de maquettes impactantes.",
   
-    "founder.2.name": "Hamza Kermadi",
+    "founder.2.name": "Hamza",
     "founder.2.role": "Co‑fondateur · CEO",
     "founder.2.tags": "Paris, Bruxelles, Luxembourg",
     "founder.2.bio": "Direction créative & branding. RPA Developer & Développeur Web, passionné par le design, l'identité visuelle et les expériences digitales engageantes.",
@@ -83,7 +85,7 @@
     "contact.subtitle": "Dites‑nous où vous voulez aller. On revient vers vous sous 24h avec une proposition claire.",
     "contact.placeholder.name": "Votre nom",
     "contact.placeholder.email": "Email",
-    "contact.placeholder.budget": "Budget estimé (ex: 2‑5k€)",
+    "contact.placeholder.budget": "Budget estimé",
     "contact.placeholder.message": "Parlez‑nous de votre idée…",
     "contact.send": "Envoyer",
     "contact.legal": "En cliquant, vous acceptez notre politique de confidentialité.",

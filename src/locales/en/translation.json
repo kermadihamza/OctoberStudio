@@ -4,7 +4,7 @@
     "nav.process": "Method",
     "nav.about": "About",
     "nav.contact": "Contact",
-    "nav.quote": "Request a quote",
+    "nav.quote": "Contact",
   
     "a11y.menu.open": "Open menu",
     "a11y.social.instagram": "Instagram",
@@ -56,12 +56,12 @@
     "about.p1.cities": "Brussels, Luxembourg, Paris and Dubai",
     "about.p2": "From branding to web development (React, WordPress, no‑code), plus SEO, online ads and content creation — we help SMEs, startups and creators stand out and grow.",
   
-    "founder.1.name": "Ouissam Mouniri",
+    "founder.1.name": "Ouissam",
     "founder.1.role": "Co‑founder · CEO",
     "founder.1.tags": "Dubai, Middle East",
     "founder.1.bio": "Digital strategy & project leadership. Expert in marketing campaigns, lead generation, business performance and impactful wireframes.",
   
-    "founder.2.name": "Hamza Kermadi",
+    "founder.2.name": "Hamza",
     "founder.2.role": "Co‑founder · CEO",
     "founder.2.tags": "Paris, Brussels, Luxembourg",
     "founder.2.bio": "Creative direction & branding. RPA Developer & Web Developer, passionate about design, visual identity and engaging digital experiences.",
@@ -83,7 +83,7 @@
     "contact.subtitle": "Tell us where you want to go. We'll get back within 24h with a clear proposal.",
     "contact.placeholder.name": "Your name",
     "contact.placeholder.email": "Email",
-    "contact.placeholder.budget": "Estimated budget (e.g. €2–5k)",
+    "contact.placeholder.budget": "Estimated budget",
     "contact.placeholder.message": "Tell us about your idea…",
     "contact.send": "Send",
     "contact.legal": "By clicking, you agree to our privacy policy.",
