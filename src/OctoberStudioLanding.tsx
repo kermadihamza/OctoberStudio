@@ -7,6 +7,7 @@ import { Textarea } from "./components/ui/textarea";
 import { ArrowRight, Sparkles, Send, BadgeCheck, Layout, Zap, PenTool, MonitorSmartphone, Instagram, Linkedin, Menu } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Trans } from "react-i18next";
+import { setUserLang } from "./lib/langDetector";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 16 },
@@ -59,17 +60,21 @@ export default function OctoberStudioLanding() {
                   <a href="#contact">{t("nav.quote")}</a>
                 </Button>
 
-                {/* Lang switch */}
                 <div className="ml-3 inline-flex overflow-hidden rounded-xl border border-white/10">
-                  <button
-                    className={`px-2 py-1 text-xs ${i18n.language === "fr" ? "bg-white/10" : ""}`}
-                    onClick={() => i18n.changeLanguage("fr")}
-                  >FR</button>
-                  <button
-                    className={`px-2 py-1 text-xs ${i18n.language === "en" ? "bg-white/10" : ""}`}
-                    onClick={() => i18n.changeLanguage("en")}
-                  >EN</button>
-                </div>
+  <button
+    onClick={() => { i18n.changeLanguage("fr"); setUserLang("fr"); }}
+    className={i18n.language === "fr" ? "bg-white/10 px-2 py-1 text-xs" : "px-2 py-1 text-xs"}
+  >
+    FR
+  </button>
+  <button
+    onClick={() => { i18n.changeLanguage("en"); setUserLang("en"); }}
+    className={i18n.language === "en" ? "bg-white/10 px-2 py-1 text-xs" : "px-2 py-1 text-xs"}
+  >
+    EN
+  </button>
+</div>
+
               </nav>
 
               {/* Mobile */}
