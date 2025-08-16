@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden"
+      className="relative flex items-center justify-center overflow-hidden min-h-screen sm:min-h-[90vh]"
     >
       {/* Fond galaxy */}
       <div className="absolute inset-0 -z-10 animate-galaxy" />
@@ -26,35 +26,55 @@ export default function Hero() {
           variants={stagger}
           className="flex flex-col items-center"
         >
+          {/* Titre */}
           <motion.h1
             variants={fadeIn}
-            className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl"
+            className="text-3xl font-semibold tracking-tight sm:text-5xl md:text-6xl"
           >
             <Trans
               i18nKey="hero.title"
               components={{
-                c1: <span className="bg-gradient-to-tr from-red-600 via-red-500 to-red-400 bg-clip-text text-transparent" />,
-                c2: <span className="underline decoration-red-500/60 underline-offset-8" />
+                c1: (
+                  <span className="bg-gradient-to-tr from-red-600 via-red-500 to-red-400 bg-clip-text text-transparent" />
+                ),
+                c2: (
+                  <span className="underline decoration-red-500/60 underline-offset-8" />
+                ),
               }}
             />
           </motion.h1>
 
-          <motion.p variants={fadeIn} className="mt-6 max-w-2xl text-neutral-300">
+          {/* Sous-titre */}
+          <motion.p
+            variants={fadeIn}
+            className="mt-6 max-w-2xl text-neutral-300"
+          >
             {t("hero.subtitle")}
           </motion.p>
 
-          <motion.div variants={fadeIn} className="mt-8 flex gap-4 flex-wrap justify-center">
+          {/* Boutons CTA */}
+          <motion.div
+            variants={fadeIn}
+            className="mt-8 flex gap-4 flex-wrap justify-center items-center"
+          >
             <Button asChild size="lg" className="rounded-2xl">
               <a href="#contact" className="inline-flex items-center gap-2">
                 {t("hero.cta.start")} <ArrowRight className="h-4 w-4" />
               </a>
             </Button>
-            <a href="#work" className="text-sm/6 text-neutral-300 hover:text-white">
+            <a
+              href="#work"
+              className="inline-flex items-center px-4 py-2 text-sm font-medium text-neutral-300 hover:text-white"
+            >
               {t("hero.cta.view")}
             </a>
           </motion.div>
 
-          <motion.div variants={fadeIn} className="mt-8 flex items-center gap-6 text-xs text-neutral-300">
+          {/* Badges */}
+          <motion.div
+            variants={fadeIn}
+            className="mt-8 flex items-center gap-6 text-xs text-neutral-300"
+          >
             <div className="inline-flex items-center gap-2">
               <BadgeCheck className="h-4 w-4 text-red-500" />
               {t("hero.badge.tech1")}
