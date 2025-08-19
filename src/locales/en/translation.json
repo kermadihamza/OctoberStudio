@@ -32,9 +32,13 @@
     "services.card.3.desc": "Optimised SEO, targeted digital campaigns, and performance tracking to grow your audience and results.",
     "services.card.4.title": "Automation & Connected Ecosystems",
     "services.card.4.desc": "Smart workflows and custom integrations to connect your tools, streamline processes, and boost efficiency.",
-
-    "work.title": "Selected work",
-    "work.subtitle": "A glimpse of recent projects — a blend of design, motion and technical rigor.",
+    "services.card.1.skills": "CMS, WordPress, No-Code, ReactJS, HTML, CSS, UI/UX",
+    "services.card.2.skills": "Branding, Copywriting, Storytelling, Community Management",
+    "services.card.3.skills": "SEO, SEA, Meta Ads, Google Ads",
+    "services.card.4.skills": "RPA, CRM Automation, ERP Integration, APIs, Machine Learning",
+    
+    "work.title": "Our Projects",
+    "work.subtitle": "A selection of recent work",
     "work.card.project": "Project {{index}}",
     "work.card.meta": "Nooz Production",
   
@@ -51,31 +55,34 @@
     "about.title": "Who are we?",
     "about.p1": "Two co‑founders running October Studio, working between {{cities}}. We build high‑performing sites, strong brands and digital campaigns that convert.",
     "about.p1.cities": "Brussels, Luxembourg, Paris and Dubai",
-    "about.p2": "From branding to web development (React, WordPress, no‑code), plus SEO, online ads and content creation — we help SMEs, startups and creators stand out and grow.",
-  
-    "founder.1.name": "Ouissam",
-    "founder.1.role": "Co‑founder · CEO",
-    "founder.1.tags": "Dubai, Middle East",
-    "founder.1.bio": "Digital strategy & project leadership. Expert in marketing campaigns, lead generation, business performance and impactful wireframes.",
+    "about.p2": "From branding to web development (React, WordPress, no‑code), plus SEO, online ads and content creation. We help SMEs, startups and creators stand out and grow.",
   
     "about.foundersTitle": "Founders",
+    "founder.1.name": "Ouissam",
+    "founder.1.role": "Co-founder · Business & Strategy",
+    "founder.1.bio": "“A strategy can change everything. My role is to give meaning and direction to your projects: build campaigns that engage, generate leads that matter, and create content that leaves a mark. My ambition: to turn every idea, every project into a tangible and measurable success.”",
+
     "founder.2.name": "Hamza",
-    "founder.2.role": "Co‑founder · CEO",
-    "founder.2.tags": "Paris, Brussels, Luxembourg",
-    "founder.2.bio": "Creative direction & branding. RPA Developer & Web Developer, passionate about design, visual identity and engaging digital experiences.",
-  
-    "offer.title": "What we offer",
-    "offer.item.1": "High‑performance websites (showcase, e‑commerce, custom apps)",
-    "offer.item.2": "Marketing strategies & multichannel ad campaigns",
-    "offer.item.3": "Branding, visual identity & content creation",
-    "offer.item.4": "SEO, analytics & ongoing performance optimization",
+    "founder.2.role": "Co-founder · Development & Automation",
+    "founder.2.bio": "“Digital is my playground. I love pushing the boundaries of what’s possible by creating innovative websites and tailor-made tools that combine performance with engaging design. My ambition: to simplify what’s complex and build digital experiences that take you further.”",
+
+    "offer.title": "What We Guarantee",
+    "offer.item.1": "A tailor-made project",
+    "offer.item.2": "Respected deadlines",
+    "offer.item.3": "Transparent communication",
+    "offer.item.4": "Dedicated support",
+    "offer.item.5": "A trusted partnership",
+    "offer.item.6": "Measurable results",
+
     "offer.metric.1.k": "100%",
     "offer.metric.1.v": "custom projects",
     "offer.metric.2.k": "A+",
-    "offer.metric.2.v": "Perf/SEO target",
+    "offer.metric.2.v": "SEO/Performance target",
     "offer.metric.3.k": "<1s",
-    "offer.metric.3.v": "Target load time",
-    "offer.skills": "React, WordPress, No‑code, SEO, Google Ads, Social Ads, Branding, Motion Design, RPA, UI/UX Design",
+    "offer.metric.3.v": "Loading time goal",
+
+    "offer.skills": "React, WordPress, No-code, SEO, Google Ads, Social Ads, Branding, Motion Design, RPA, UI/UX Design",
+
   
     "contact.title": "Let's talk about your project",
     "contact.subtitle": "Tell us where you want to go. We'll get back within 24h with a clear proposal.",
