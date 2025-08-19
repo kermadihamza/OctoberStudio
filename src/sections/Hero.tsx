@@ -23,7 +23,7 @@ export default function Hero() {
         aria-hidden="true"
         className="absolute inset-0 z-0 h-full w-full object-cover"
         >
-        <source src="/public/background_video_header.mp4" type="video/mp4" />
+        <source src="/background_video_header.mp4" type="video/mp4" />
         {/* Fallback si la vidéo n'est pas supportée */}
       </video>
 
